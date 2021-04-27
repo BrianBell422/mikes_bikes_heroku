@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+    <h2>Edit Manufacturer</h2>
+</head>
+
+<form action="/manufacturers/{{ manufacturer.id }}" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{manufacturer.name}}" required autofocus>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="{{manufacturer.location}}" required autofocus>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="product_type">Product Type:</label>
+        <input type="product_type" id="product_type" name="product_type" value="{{manufacturer.product_type}}" required autofocus>
+    </div>
+
+    <br>
+    <div class="edit_button">
+        <button type="submit">Update Manufacturer</button>
+    </div>
+</form>
+
+{% endblock %}

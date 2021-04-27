@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<header class="page_header">
+    <h1>Welcome to Mike's Bikes</h1>
+</header>
+
+<main id="index_grid_container">
+    <aside id="index_image">
+        <img src="static/images/mike.png" alt="Mike">
+    </aside>
+    <div class="app_description">
+        With this app you will be able to:
+        <ul>
+            <li>View a current stock list with relevant details</li>
+            <li>Show when an bike is low on, or out of stock</li>
+            <li>Show all manufacturers & edit details</li>
+            <li>Show all bikes & edit details</li>
+            <li>Add new manufacturers</li>
+            <li>Add new bikes</li>
+        </ul>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,103 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgrey;
+}
+
+.base_header {
+    background-color: black;
+    width: 100%;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 50px;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    font-size: large;
+}
+
+a:link {
+    color: black;
+    text-decoration: transparent;
+}
+  
+a:visited {
+    color: black;
+    text-decoration: transparent;
+}
+  
+a:hover {
+    color:black;
+    text-decoration: underline;
+}
+
+a:active {
+    color: darkgrey;
+    text-decoration: underline;
+}
+
+footer {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    height: 325px;
+}
+
+.footer_img {
+    width: 100%;
+}
+
+.page_header {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+#index_grid_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+
+.stock_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.list_titles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.list_item {
+    padding-right: 10px;
+    padding-left: 10px;
+    list-style-type: none
+}
+
+hr {
+    border: 1px solid darkgrey;
+}
+
+.center_items {
+    text-align: center;
+}

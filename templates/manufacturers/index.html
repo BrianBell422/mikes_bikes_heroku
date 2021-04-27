@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header class="page_header">
+    <h1>Manufacturers</h1>
+    <h3>Click on manufacturer for details</h3>
+</header>
+<section class="center_items"> 
+    {% for manufacturer in all_manufacturers %}
+        <hr>
+        <div id="manufacturer_name">
+            <h3><a href="/manufacturers/{{manufacturer.id}}">{{manufacturer.name}}</a></h3>
+        </div>
+        <hr>
+    {% endfor %}
+</section>
+
+<br>
+
+<div class="button">
+    <a href="manufacturers/new">Add new manufacturer</a>
+</div>
+    
+{% endblock %}

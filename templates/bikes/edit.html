@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+  <h1>Edit Bike</h1>
+</head>
+
+<form action="/bikes/{{bike.id}}" method="post" class="edit_form">
+ 
+  <div class="edit_manufacturer">
+      <label for="manufacturer">Manufacturer:</label>
+      <select id="manufacturer" name="manufacturer_id">
+        {% for manufacturer in all_manufacturers %}
+          <option value="{{ manufacturer.id }}"
+            {% if bike.manufacturer.id == manufacturer.id %} selected="selected"{% endif %}>
+            {{ manufacturer.name }}
+          </option>
+        {% endfor %}
+      </select>
+  </div>
+
+  <br>
+
+  <div class="form">
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model" value="{{bike.model}}" required>
+  </div>
+
+  <br>
+
+  <div class="form">
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value="{{bike.description}}" required autofocus>
+  </div>
+
+  <br>
+
+  <div class="form">
+    <label for="buy_cost">Buy Cost:</label>
+    <input type="text" id="buy_cost" name="buy_cost" value="{{bike.buy_cost}}" required autofocus>
+  </div>
+
+  <br>
+
+  <div class="form">
+    <label for="sell_price">Sell Price:</label>
+    <input type="text" id="sell_price" name="sell_price" value="{{bike.sell_price}}" required autofocus>
+  </div>
+
+  <br>
+
+  <div class="form">
+    <label for="stock_level">Stock Level:</label>
+    <input type="text" id="stock_level" name="stock_level" value="{{bike.stock_level}}" required autofocus>
+  </div>
+
+  <br>
+
+  <div class="edit_button">
+    <button type="submit">Update Bike</button>
+  </div>
+
+</form>
+
+{% endblock %}

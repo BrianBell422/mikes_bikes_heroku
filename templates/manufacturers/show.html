@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header class="page_header">
+  <h1>Selected Manufacturer</h1>
+</header>
+
+<hr>
+
+<section class="center_items">
+  <h2>{{manufacturer.name}}</h2>
+  <p><b>Location:</b> {{manufacturer.location}}</p>
+  <p><b>Product Type:</b> {{manufacturer.product_type}}</p>
+</section>
+
+<br>
+
+<div class="buttons">
+  <div class="button">
+    <a href="/manufacturers/{{manufacturer.id}}/edit">Edit</a>
+  </div>
+
+  <br>
+
+  <div class="button">
+    <a href="/manufacturers/{{manufacturer.id}}/bikes">Bikes by manufacturer</a>
+  </div>
+
+  <br>
+
+  <form class="delete_button" action="/manufacturers/{{manufacturer.id}}/delete" method="POST">
+      <button>Delete</button>
+  </form>
+</div>
+
+{% endblock %}
